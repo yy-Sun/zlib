@@ -8,11 +8,11 @@
 #include <stdint.h>
 struct Node {
     void *data;
-    Node *next;
+    struct Node *next;
 };
 
 struct List {
-    Node *head;
+    struct Node *head;
     uint32_t size;
 };
 
