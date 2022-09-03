@@ -4,7 +4,6 @@ project(zlib)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 14)
 
-add_compile_options(-stdlib=libc++)
 include_directories(include)
 add_library(libpyc SHARED zlist.c include/zlist.h)
 
@@ -21,7 +20,7 @@ enable_testing()
 
 add_executable(
         test_list
-        test_list.c
+        tests/test_list.cpp
 )
 target_link_libraries(
         test_list
